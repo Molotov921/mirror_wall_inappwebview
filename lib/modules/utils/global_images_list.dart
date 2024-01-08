@@ -1,46 +1,90 @@
 import 'package:mirror_wall_inappwebview/modules/views/homepage/model/web_model.dart';
 
 class WebModelData {
-  static List<WebModel> allWebData = [
+  static List<WebModel> allEduWebData = [
     WebModel(
-        name: "UIDAI",
-        image: "assets/images/uidai.png",
-        link: 'https://uidai.gov.in'),
+        name: "W3schools",
+        image: "assets/images/educational/W3Schools_logo.png",
+        link: 'https://www.w3schools.com'),
     WebModel(
-        name: "India_Portal",
-        image: "assets/images/india_portal.png",
-        link: 'https://www.india.gov.in'),
+        name: "Wikipedia",
+        image: "assets/images/educational/Wikipedia_Logo.png",
+        link: 'https://www.wikipedia.org'),
     WebModel(
-        name: "GST",
-        image: "assets/images/gst_logo.png",
-        link: 'https://www.gst.gov.in'),
+        name: "JavatPoint",
+        image: "assets/images/educational/javapoint.png",
+        link: 'https://www.javatpoint.com'),
     WebModel(
-        name: "Parivahan",
-        image: "assets/images/logo_parivahan_sewa.png",
-        link: "https://parivahan.gov.in"),
+        name: "TutorialsPoint",
+        image: "assets/images/educational/tutorial_point_logo.png",
+        link: "https://www.tutorialspoint.com"),
     WebModel(
-        name: "Digital_India",
-        image: "assets/images/digital_india.png",
-        link: "https://digitalindia.gov.in"),
+        name: "Codecademy",
+        image: "assets/images/educational/codecademy.jpg",
+        link: "https://www.codecademy.com"),
     WebModel(
-        name: "Digilocker",
-        image: "assets/images/digilocker_logo.png",
-        link: "https://www.digilocker.gov.inac"),
+        name: "StackOverFlow",
+        image: "assets/images/educational/stack_overflow_logo.png",
+        link: "https://stackoverflow.com"),
     WebModel(
-        name: "Income_tax_india",
-        image: "assets/images/income_tax.png",
-        link: "https://www.incometaxindia.gov.in"),
+        name: "Udemy",
+        image: "assets/images/educational/udemy_logo.jpg",
+        link: "https://www.udemy.com"),
     WebModel(
-        name: "IRCTC",
-        image: "assets/images/irctc_logo.png",
-        link: "https://www.irctc.co.in"),
+        name: "Byju's",
+        image: "assets/images/educational/Byju's_logo.png",
+        link: "https://byjus.com"),
+  ];
+  static List<WebModel> allOttWebData = [
     WebModel(
-        name: "MCA",
-        image: "assets/images/mca_logo.png",
-        link: "https://www.mca.gov.in"),
+        name: "Disney Plus Hotstar",
+        image: "assets/images/ott/hotstar.png",
+        link: 'https://www.hotstar.com/in'),
     WebModel(
-        name: "DoT",
-        image: "assets/images/dot_logo.png",
-        link: "https://dot.gov.in"),
+        name: "SonyLiv",
+        image: "assets/images/ott/sonyliv.jpeg",
+        link: 'https://www.sonyliv.com'),
+    WebModel(
+        name: "Netflix",
+        image: "assets/images/ott/netflix.jpeg",
+        link: 'https://www.netflix.com/in'),
+    WebModel(
+        name: "Amazon Prime Video",
+        image: "assets/images/ott/prime_video.jpeg",
+        link: "https://www.primevideo.com"),
+    WebModel(
+        name: "Amazon Mini TV",
+        image: "assets/images/ott/mini_tv.jpg",
+        link: "https://www.amazon.in/minitv"),
+    WebModel(
+        name: "Jio Cinema",
+        image: "assets/images/ott/jio_ciname.jpg",
+        link: "https://www.jiocinema.com"),
+    WebModel(
+        name: "Zee 5",
+        image: "assets/images/ott/zee5.jpeg",
+        link: "https://www.zee5.com"),
+    WebModel(
+        name: "Altt Balaji",
+        image: "assets/images/ott/alt.jpeg",
+        link: "https://altt.co.in"),
+  ];
+  static List<WebModel> allSearchData = [
+    WebModel(
+        name: "Google",
+        image: "assets/images/search/google.png",
+        link: 'https://www.google.com'),
+    WebModel(
+        name: "Bing",
+        image: "assets/images/search/bing.png",
+        link: 'https://www.bing.com'),
+    WebModel(
+        name: "Yahoo",
+        image: "assets/images/search/yahoo.png",
+        link: 'https://in.search.yahoo.com'),
+    WebModel(
+        name: "Duckduckgo",
+        image: "assets/images/search/duckduckgo.png",
+        link: "https://duckduckgo.com"),
   ];
 }

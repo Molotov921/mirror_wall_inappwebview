@@ -3,6 +3,7 @@ import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 class WebServProvider extends ChangeNotifier {
   String selectedService = "";
+  bool isLoading = false;
 
   InAppWebViewController? inAppWebViewController;
   PullToRefreshController? pullToRefreshController;
@@ -11,6 +12,7 @@ class WebServProvider extends ChangeNotifier {
     pullToRefreshController = PullToRefreshController(
       settings: PullToRefreshSettings(color: Colors.blue),
       onRefresh: () {
+        startLoading();
         inAppWebViewController?.reload();
       },
     );
@@ -23,5 +25,15 @@ class WebServProvider extends ChangeNotifier {
 
   String getSelectedService() {
     return selectedService;
+  }
+
+  void startLoading() {
+    isLoading = true;
+    notifyListeners();
+  }
+
+  void stopLoading() {
+    isLoading = false;
+    notifyListeners();
   }
 }

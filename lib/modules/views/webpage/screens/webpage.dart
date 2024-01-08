@@ -48,9 +48,17 @@ class Webpage extends StatelessWidget {
               IconButton(
                 onPressed: () async {
                   var controller = webServProvider.inAppWebViewController!;
-                  await controller.reload();
+                  if (webServProvider.isLoading) {
+                    webServProvider.stopLoading();
+                    await controller.stopLoading();
+                  } else {
+                    webServProvider.startLoading();
+                    await controller.reload();
+                  }
                 },
-                icon: const Icon(Icons.refresh),
+                icon: webServProvider.isLoading
+                    ? const Icon(Icons.close)
+                    : const Icon(Icons.refresh),
                 color: Colors.white,
               ),
               IconButton(
@@ -80,6 +88,7 @@ class Webpage extends StatelessWidget {
           webServProvider.inAppWebViewController = controller;
         },
         onLoadStop: (controller, uri) async {
+          webServProvider.stopLoading();
           await webServProvider.pullToRefreshController?.endRefreshing();
         },
       ),

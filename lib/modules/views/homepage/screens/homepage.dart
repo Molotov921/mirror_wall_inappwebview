@@ -9,7 +9,18 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Mirror Wall App'),
         centerTitle: true,
-        // leading: ,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: () {
+              Navigator.of(context).pushNamed('search');
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.more_vert),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: Container(
         color: Colors.white,
@@ -72,9 +83,9 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 15),
             Expanded(
               child: InkWell(
-                // onTap: () {
-                //   Navigator.of(context).pushNamed('detail3');
-                // },
+                onTap: () {
+                  Navigator.of(context).pushNamed('detail3');
+                },
                 child: Card(
                   elevation: 0,
                   child: Container(
