@@ -49,7 +49,7 @@ class _SearchWebState extends State<SearchWebPage> {
                       Container(
                         padding: const EdgeInsets.all(5.0),
                         child: Image.asset(
-                          'assets/images/$selectedSearchEngine.png',
+                          'assets/images/search/$selectedSearchEngine.png',
                           height: 24.0,
                           width: 24.0,
                         ),
@@ -102,7 +102,7 @@ class _SearchWebState extends State<SearchWebPage> {
                     child: Row(
                       children: [
                         Image.asset(
-                          'assets/images/$value.png',
+                          'assets/images/search/$value.png',
                           height: 24.0,
                           width: 24.0,
                         ),

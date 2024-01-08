@@ -6,6 +6,8 @@ class SearchProvider extends ChangeNotifier {
   String searchUrl = "";
 
   void searching(String search, String src) {
+    String searchText = searchController.text;
+
     if (src == 'google') {
       searchUrl = "https://www.google.com/search?q=";
     } else if (src == 'bing') {
@@ -15,8 +17,12 @@ class SearchProvider extends ChangeNotifier {
     } else if (src == 'yahoo') {
       searchUrl = "https://in.search.yahoo.com/search?q=";
     }
-    searchUrl = searchUrl + searchController.text;
+
+    searchUrl = searchUrl + searchText;
     notifyListeners();
-    searchController.clear();
+
+    Future.delayed(Duration.zero, () {
+      searchController.clear();
+    });
   }
 }

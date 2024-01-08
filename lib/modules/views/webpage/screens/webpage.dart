@@ -5,7 +5,9 @@ import 'package:mirror_wall_inappwebview/modules/views/homepage/model/web_model.
 import 'package:provider/provider.dart';
 
 class Webpage extends StatelessWidget {
-  const Webpage({Key? key}) : super(key: key);
+  final String url;
+
+  const Webpage({Key? key, required this.url}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +46,59 @@ class Webpage extends StatelessWidget {
                 },
                 icon: const Icon(Icons.arrow_forward),
                 color: Colors.white,
+              ),
+              IconButton(
+                icon: const Icon(Icons.star_outline),
+                color: Colors.white,
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: const Text(
+                          'Add Bookmark',
+                        ),
+                        content: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            TextField(
+                              onSubmitted: (val) {
+                                webServProvider.textControllerModel.titleTxt;
+                              },
+                              controller:
+                                  webServProvider.textControllerModel.titleTxt,
+                              keyboardType: TextInputType.text,
+                              decoration: const InputDecoration(
+                                hintText: 'Enter your Title',
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(10),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            InkWell(
+                              onTap: () {
+                                Provider.of<WebServProvider>(context,
+                                        listen: false)
+                                    .addBookmark(url);
+                                Navigator.of(context).pop();
+                              },
+                              child: Card(
+                                elevation: 8,
+                                margin: const EdgeInsets.only(top: 15),
+                                child: Container(
+                                  margin: const EdgeInsets.all(10),
+                                  child: const Text("Save"),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                  );
+                },
               ),
               IconButton(
                 onPressed: () async {

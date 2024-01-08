@@ -16,9 +16,24 @@ class HomePage extends StatelessWidget {
               Navigator.of(context).pushNamed('search');
             },
           ),
-          IconButton(
-            icon: const Icon(Icons.more_vert),
-            onPressed: () {},
+          PopupMenuButton<String>(
+            onSelected: (value) {
+              if (value == 'bookmarks') {
+                Navigator.of(context).pushNamed('bookmarks');
+              }
+            },
+            itemBuilder: (BuildContext context) => [
+              const PopupMenuItem<String>(
+                value: 'bookmarks',
+                child: Row(
+                  children: [
+                    Icon(Icons.star_outline),
+                    SizedBox(width: 8),
+                    Text('Bookmarks'),
+                  ],
+                ),
+              ),
+            ],
           ),
         ],
       ),

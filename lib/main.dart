@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mirror_wall_inappwebview/modules/views/bookmark/bookmark.dart';
 import 'modules/providers/all_mirror_provider.dart';
 import 'modules/providers/search_provider.dart';
 import 'modules/views/detailpage/detailpage.dart';
@@ -40,8 +41,11 @@ void main() {
                 data: WebModelData.allSearchData,
                 tname: "Search Engines",
               ),
-          'webpage': (context) => const Webpage(),
+          'webpage': (context) => const Webpage(
+                url: '',
+              ),
           'search': (context) => const SearchWebPage(),
+          'bookmarks': (context) => const Bookmark(),
         },
       ),
     ),

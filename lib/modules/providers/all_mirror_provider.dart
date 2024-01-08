@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:mirror_wall_inappwebview/modules/models/bookmark_model.dart';
+import 'package:mirror_wall_inappwebview/modules/models/text_controller_model.dart';
 
 class WebServProvider extends ChangeNotifier {
   String selectedService = "";
@@ -18,6 +20,12 @@ class WebServProvider extends ChangeNotifier {
     );
   }
 
+  List<Bookmark> bookmarks = [];
+
+  TextControllerModel textControllerModel = TextControllerModel(
+    titleTxt: TextEditingController(text: ''),
+  );
+
   void updateSelectedService(String service) {
     selectedService = service;
     notifyListeners();
@@ -35,5 +43,11 @@ class WebServProvider extends ChangeNotifier {
   void stopLoading() {
     isLoading = false;
     notifyListeners();
+  }
+
+  void addBookmark(String url) {
+    bookmarks.add(Bookmark(title: textControllerModel.titleTxt.text, url: url));
+    notifyListeners();
+    textControllerModel.titleTxt.clear();
   }
 }
