@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
                 value: 'bookmarks',
                 child: Row(
                   children: [
-                    Icon(Icons.star_outline),
+                    Icon(Icons.star),
                     SizedBox(width: 8),
                     Text('Bookmarks'),
                   ],
