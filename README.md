@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-Flutter application featuring a student website, integrated search engine, and seamless access to popular OTT platforms directly from their respective websites. Explore a unified experience that brings together educational resources, efficient web searching, and easy navigation to OTT content within a single app.
+Flutter application featuring a student website, integrated search engine, and seamless access to popular OTT platforms directly from their respective websites. All functionalities like back button, forward button, reload button, search bar, cancel button(while reloading) and bookmark manager.Explore a unified experience that brings together educational resources, efficient web searching, and easy navigation to OTT content within a single app.
 
 
 
