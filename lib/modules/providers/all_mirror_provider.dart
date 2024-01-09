@@ -50,4 +50,15 @@ class WebServProvider extends ChangeNotifier {
     notifyListeners();
     textControllerModel.titleTxt.clear();
   }
+
+  void deleteBookmark(int index) {
+    bookmarks.removeAt(index);
+    notifyListeners();
+  }
+
+  void editBookmark(int index, String newTitle) {
+    bookmarks[index].title = newTitle;
+    notifyListeners();
+    textControllerModel.titleTxt.clear();
+  }
 }

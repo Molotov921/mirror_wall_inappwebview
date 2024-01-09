@@ -20,7 +20,7 @@ class WebModelData {
         link: "https://www.tutorialspoint.com"),
     WebModel(
         name: "Codecademy",
-        image: "assets/images/educational/codecademy.jpg",
+        image: "assets/images/educational/codecademy.png",
         link: "https://www.codecademy.com"),
     WebModel(
         name: "StackOverFlow",
@@ -28,7 +28,7 @@ class WebModelData {
         link: "https://stackoverflow.com"),
     WebModel(
         name: "Udemy",
-        image: "assets/images/educational/udemy_logo.jpg",
+        image: "assets/images/educational/udemy_logo.png",
         link: "https://www.udemy.com"),
     WebModel(
         name: "Byju's",
@@ -37,7 +37,7 @@ class WebModelData {
   ];
   static List<WebModel> allOttWebData = [
     WebModel(
-        name: "Disney Plus Hotstar",
+        name: "Disney + Hotstar",
         image: "assets/images/ott/hotstar.png",
         link: 'https://www.hotstar.com/in'),
     WebModel(
@@ -46,10 +46,10 @@ class WebModelData {
         link: 'https://www.sonyliv.com'),
     WebModel(
         name: "Netflix",
-        image: "assets/images/ott/netflix.jpeg",
+        image: "assets/images/ott/netflix.png",
         link: 'https://www.netflix.com/in'),
     WebModel(
-        name: "Amazon Prime Video",
+        name: "Prime Video",
         image: "assets/images/ott/prime_video.jpeg",
         link: "https://www.primevideo.com"),
     WebModel(
@@ -66,7 +66,7 @@ class WebModelData {
         link: "https://www.zee5.com"),
     WebModel(
         name: "Altt Balaji",
-        image: "assets/images/ott/alt.jpeg",
+        image: "assets/images/ott/alt.png",
         link: "https://altt.co.in"),
   ];
   static List<WebModel> allSearchData = [
