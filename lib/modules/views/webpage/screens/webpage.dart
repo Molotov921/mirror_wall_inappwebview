@@ -81,7 +81,7 @@ class Webpage extends StatelessWidget {
                               onTap: () {
                                 Provider.of<WebServProvider>(context,
                                         listen: false)
-                                    .addBookmark(url);
+                                    .addBookmark(webModelData.link);
                                 Navigator.of(context).pop();
                               },
                               child: Card(

@@ -1,6 +1,6 @@
 class Bookmark {
-  final String title;
-  final String url;
+  String title;
+  String url;
 
   Bookmark({required this.title, required this.url});
 }
