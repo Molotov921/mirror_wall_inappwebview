@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../providers/all_mirror_provider.dart';
-import '../webpage/screens/webpage.dart';
 
-class Bookmark extends StatefulWidget {
+class Bookmark extends StatelessWidget {
   const Bookmark({super.key});
 
-  @override
-  State<Bookmark> createState() => _BookmarkDesignState();
-}
-
-class _BookmarkDesignState extends State<Bookmark> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,12 +16,7 @@ class _BookmarkDesignState extends State<Bookmark> {
         children: Provider.of<WebServProvider>(context).bookmarks.map((e) {
           return InkWell(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Webpage(url: e.url),
-                ),
-              );
+              Navigator.of(context).pushNamed('webpage', arguments: e);
             },
             child: Card(
               elevation: 8,
