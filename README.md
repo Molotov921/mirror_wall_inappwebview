@@ -2,6 +2,14 @@
 
 A new Flutter project.
 
+Flutter application featuring a student website, integrated search engine, and seamless access to popular OTT platforms directly from their respective websites. Explore a unified experience that brings together educational resources, efficient web searching, and easy navigation to OTT content within a single app.
+
+
+
+https://github.com/Molotov921/mirror_wall_inappwebview/assets/106720289/e642e464-93d2-47c8-b2d4-c22e354c9619
+
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
